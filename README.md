@@ -19,7 +19,7 @@
                .config(senderMailName, senderMailPassword, revieverMailName)
                .sendMail(subjectStr, contentStr)
 
-详情可参考demo中MainActivity
+详情可参考demo中 [MainActivity.java](https://github.com/Leo0618/mail/blob/master/app/src/main/java/com/leo618/email/MainActivity.java "MainActivity.java")
 
 ## Step4 添加混淆(如需) ##
 
