@@ -1,23 +1,25 @@
 # mail
 简易邮箱发送管理器，目前暂时仅支持126邮箱，需要扩展可修改源码。
 
-## Step1 添加权限##
+
+
+## Step1 添加权限 ##
 
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-## Step2 添加依赖##
+## Step2 添加依赖 ##
 
 	dependencies {
 		compile 'com.leo618:mail:0.0.2'
 	}
 
-## Step3 代码使用##
+## Step3 代码使用 ##
 
 	MailManager.config(senderMailName, senderMailPassword, revieverMailName)
                .sendMail(subjectStr, contentStr)
 
-详情可参考demo中MainActivity
+详情可参考demo中 [MainActivity.java](https://github.com/Leo0618/mail/blob/master/app/src/main/java/com/leo618/email/MainActivity.java "MainActivity.java")
 
 ## Step4 添加混淆(如需) ##
 
@@ -30,3 +32,8 @@
 	-keep class com.leo618.email.MailManager{
 	       public *;
 	}
+
+
+----
+
+参考：  https://github.com/Dev-Wiki/MailSender
