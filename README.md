@@ -1,7 +1,6 @@
 # mail
 简易邮箱发送管理器，目前暂时仅支持126邮箱，需要扩展可修改源码。
 
-
 ## Step1 添加权限##
 
 
@@ -10,13 +9,12 @@
 ## Step2 添加依赖##
 
 	dependencies {
-		compile 'com.leo618:mail:0.0.1'
+		compile 'com.leo618:mail:0.0.2'
 	}
 
 ## Step3 代码使用##
 
-	MailManager.getInstance()
-               .config(senderMailName, senderMailPassword, revieverMailName)
+	MailManager.config(senderMailName, senderMailPassword, revieverMailName)
                .sendMail(subjectStr, contentStr)
 
 详情可参考demo中MainActivity

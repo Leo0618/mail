@@ -38,7 +38,7 @@ public class MailManager {
     private static final AtomicReference<MailManager> INSTANCE = new AtomicReference<>();
 
     /** 获取邮件发送实例 */
-    public static MailManager getInstance() {
+    private static MailManager getInstance() {
         for (; ; ) {
             MailManager netManager = INSTANCE.get();
             if (netManager != null) return netManager;
@@ -49,8 +49,8 @@ public class MailManager {
 
     private MailManager() {}
 
-    private Map<String, String> paramsMap     = new LinkedHashMap<>();
-    private ArrayList<String>   recevierNames = new ArrayList<>();
+    private static Map<String, String> paramsMap     = new LinkedHashMap<>();
+    private static ArrayList<String>   recevierNames = new ArrayList<>();
 
     /**
      * 配置发送者的账号和密码(授权码)
@@ -59,7 +59,7 @@ public class MailManager {
      * @param senderPassword 密码(授权码)
      * @param recevicerNames 接收者账号数组
      */
-    public MailManager config(String senderName, String senderPassword, String... recevicerNames) {
+    public static MailManager config(String senderName, String senderPassword, String... recevicerNames) {
         paramsMap.clear();
         paramsMap.put(SENDER_NAME, senderName);
         paramsMap.put(SENDER_PASS, senderPassword);
