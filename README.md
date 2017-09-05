@@ -11,7 +11,7 @@
 ## Step2 添加依赖 ##
 
 	dependencies {
-		compile 'com.leo618:mail:0.0.2'
+		compile 'com.leo618:mail:latest.integration'
 	}
 
 ## Step3 代码使用 ##
